@@ -20,5 +20,15 @@ int main(int argc, char* argv[]) {
 		std::cout << e << std::endl;
 	}
 
+
+	// std::for_each & lambda
+	int sum = 0;
+	std::for_each(vec.begin(), vec.end(),
+		[&sum](int e) {
+		sum += e;
+	});
+	std::cout << "sum: " << sum << std::endl;
+
+
 	return 0;
 }
